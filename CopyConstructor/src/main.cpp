@@ -16,7 +16,7 @@ int main()
     Person villan("Villan", 50, 100);
     displayPerson(empty); 
 
-    Person new_obj{empty};
+    Person new_obj(empty);
     
     return 0;
 }
