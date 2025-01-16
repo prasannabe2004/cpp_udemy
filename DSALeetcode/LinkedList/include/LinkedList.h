@@ -19,4 +19,9 @@ class LinkedList {
     void deleteLast();
     void prepend(int);
     void deleteFirst(void);
+    Node *get(int index);
+    bool set(int index, int value);
+    bool insert(int index, int value);
+    void deleteNode(int index);
+    void reverse(void);
 };

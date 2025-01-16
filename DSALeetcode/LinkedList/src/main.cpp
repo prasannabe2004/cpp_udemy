@@ -30,5 +30,18 @@ int main()
     ll->deleteFirst();
     ll->printList();
 
+    Node *t;
+    t = ll->get(2);
+    if(t) {
+        std::cout << t->value << "\n";
+    }
+    ll->set(2, 200);
+    ll->printList();
+    ll->insert(1,300);
+    ll->printList();
+    ll->deleteNode(3);
+    ll->printList();
+    ll->reverse();
+    ll->printList();
     return 0;
 }
