@@ -24,4 +24,7 @@ class LinkedList {
     bool insert(int index, int value);
     void deleteNode(int index);
     void reverse(void);
+    Node *findMiddleNode();
+    bool hasLoop();
+    Node* findKthFromEnd(int k);
 };

@@ -43,5 +43,13 @@ int main()
     ll->printList();
     ll->reverse();
     ll->printList();
+    ll->append(20);
+    ll->append(30);
+    ll->append(40);
+    ll->printList();
+    Node * mid = ll->findMiddleNode();
+    std::cout << mid->value << "\n";
+    std::cout << ll->hasLoop() << "\n";
+    std::cout << ll->findKthFromEnd(3)->value << "\n";
     return 0;
 }

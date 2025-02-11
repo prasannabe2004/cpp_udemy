@@ -167,3 +167,46 @@ void LinkedList::reverse(void) {
         t = after;
     }
 }
+
+Node *LinkedList::findMiddleNode() {
+    Node *slow = head;
+    Node *fast = head;
+
+    while(fast && fast->next)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
+}
+
+bool LinkedList::hasLoop() {
+    Node *slow = head;
+    Node *fast = head;
+
+    while(fast && fast->next)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow == fast)
+            return true;
+    }
+    return false;
+}
+
+Node* LinkedList::findKthFromEnd(int k) {
+    if(head == NULL) return NULL;
+    Node *slow = head;
+    Node *fast = head;
+
+    for(int i = 1; i < k;i++) {
+        slow = slow->next;
+        if(slow == NULL)
+            return NULL;
+    }
+    while(slow->next) {
+        slow = slow->next;
+        fast = fast->next; 
+    }
+    return fast;
+}
